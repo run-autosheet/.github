@@ -1,37 +1,29 @@
-<p align="center" float="left">
-  <img alt="AutoSheet Logo" src="autosheet-github-profile.png" />
-</p>
+![Autosheet — part of GPT for Work](autosheet-github-profile.png)
 
-## Run an AI agent on any Google Sheet, via API.
-Just send a prompt and a Google Sheets id. Automating spreadsheet work has never been that easy.
+Autosheet is a spreadsheet agent that works directly in Google Sheets. You describe the work in plain language; the agent explores the spreadsheet, plans the work, does it, and checks its own results.
 
-```sh
-curl https://api.autosheet.com/v1/sheets/agents \
-  --request POST \
-  --header 'Content-Type: application/json' \
-  --header "X-API-Key: $AUTOSHEET_API_KEY" \
-  --data '{
-    "prompt": "Score these leads against our scoring rules.",
-    "document_id": "1mGKj92RmNEm_FeZudRs6ExBFMTdlvTWtwC38rhUMC0I"
-  }'
-```
+You can use Autosheet in two ways:
 
-and watch Autosheet work in your spreadsheet:
+- **[Autosheet MCP](https://github.com/run-autosheet/autosheet-mcp)** — Connect Claude, Claude Code CLI, ChatGPT, Codex CLI, or another compatible MCP client to the Autosheet MCP server and delegate spreadsheet work from your chat. Nothing to install.
 
-<p float="left">
-  <img width="512" height="327" alt="Autosheet scoring leads in Google Sheets" src="https://github.com/user-attachments/assets/92fe4c44-daf6-42f9-a214-324651444851" />
-</p>
+- **[Autosheet API](https://autosheet.com/docs/api)** — Call the same spreadsheet agent programmatically from your AI agent, workflow tool, or code.
 
+Autosheet is built by the team behind [GPT for Work](https://gptforwork.com/). The agent also powers [GPT for Sheets](https://gptforwork.com/docs/gpt-for-sheets). Using Autosheet requires a GPT for Work account.
+
+## What Autosheet can do
+
+- **Everyday spreadsheet work** — Write formulas, detect and fix errors, format cells, clean up tables, create charts and pivot tables, analyze data.
+
+- **Row-by-row bulk processing** — Clean, translate, categorize, generate, enrich, score, and more, across thousands of rows. For each column the agent fills, it writes one prompt template and uses a subagent to run the template against every row in parallel. This is AI processing per row, not a formula filled down.
+
+- **Web research** — Search the web and cite sources, the same as any chat agent. Sources are cited for research the agent does directly, not for bulk row-by-row search.
 
 ## Links
-- [Autosheet.com](https://autosheet.com/)
-- [Docs](https://autosheet.com/docs/)
-- [API reference](https://autosheet.com/docs/api/)
-- [Support](https://autosheet.com/support/)
-- [GPT for Work](https://gptforwork.com/)
 
-<div align="center">
-  <a href="https://www.youtube.com/@gptforwork" target="_blank">
-    <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" />
-  </a>
-</div>
+- [Autosheet](https://autosheet.com/)
+
+- [GPT for Work dashboard](https://dashboard.gptforwork.com/)
+
+- [Support](https://support.gptforwork.com/hc/en-us/requests/new)
+
+- [YouTube](https://www.youtube.com/@gptforwork)
