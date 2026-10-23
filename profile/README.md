@@ -1,29 +1,38 @@
-![Autosheet — part of GPT for Work](autosheet-github-profile.png)
+![Autosheet](autosheet-github-profile.png)
 
-Autosheet is a spreadsheet agent that works directly in Google Sheets. You describe the work in plain language; the agent explores the spreadsheet, plans the work, does it, and checks its own results.
+Autosheet gives your AI assistant or your own code a Google Sheets specialist. Connect your assistant through Autosheet MCP, or call the Autosheet API from your code. Then send a prompt and a Google Sheets URL: the agent reads the spreadsheet, plans the work, makes the changes and checks the result.
 
-You can use Autosheet in two ways:
+## Get started
 
-- **[Autosheet MCP](https://github.com/run-autosheet/autosheet-mcp)** — Connect Claude, Claude Code CLI, ChatGPT, Codex CLI, or another compatible MCP client to the Autosheet MCP server and delegate spreadsheet work from your chat. Nothing to install.
+**From an AI assistant (MCP).** In ChatGPT or Claude, add Autosheet from its [ChatGPT plugin page](https://chatgpt.com/plugins/plugin_asdk_app_6aa196d5c8488191a3de00c74c9534ac) or the [Claude connector directory](https://claude.ai/directory/autosheet), then sign in with Google when prompted. In other MCP clients that support streamable HTTP with OAuth, add this server URL and complete the Google sign-in in your browser:
 
-- **[Autosheet API](https://autosheet.com/docs/api)** — Call the same spreadsheet agent programmatically from your AI agent, workflow tool, or code.
+```text
+https://mcp.autosheet.com/mcp
+```
 
-Autosheet is built by the team behind [GPT for Work](https://gptforwork.com/). The agent also powers [GPT for Sheets](https://gptforwork.com/docs/gpt-for-sheets). Using Autosheet requires a GPT for Work account.
+Setup steps for each client are on [autosheet.com/mcp](https://autosheet.com/mcp), and the [autosheet-mcp](https://github.com/run-autosheet/autosheet-mcp) repository documents the server.
 
-## What Autosheet can do
+**From code (REST API).** The [Autosheet API](https://autosheet.com/docs/api) runs the same agent over HTTP, with webhooks and an OpenAPI specification. Create an API key in the [dashboard](https://dashboard.autosheet.com/login). The API is in preview and may change.
 
-- **Everyday spreadsheet work** — Write formulas, detect and fix errors, format cells, clean up tables, create charts and pivot tables, analyze data.
+Both need an Autosheet account, which you sign in to with Google. Autosheet can then work on any spreadsheet that Google account can edit. New accounts start with free credits.
 
-- **Row-by-row bulk processing** — Clean, translate, categorize, generate, enrich, score, and more, across thousands of rows. For each column the agent fills, it writes one prompt template and uses a subagent to run the template against every row in parallel. This is AI processing per row, not a formula filled down.
+## Example prompts
 
-- **Web research** — Search the web and cite sources, the same as any chat agent. Sources are cited for research the agent does directly, not for bulk row-by-row search.
+Send one of these with your Google Sheets URL:
+
+- Summarize this spreadsheet and flag anything that looks off.
+- Fill in the CEO, headcount and recent news for every company in column A.
+- For each product, write a 50-word description and translate it into French.
+- Score every lead against the rules in the Scoring rules tab.
+
+The agent also writes and fixes formulas, cleans and formats tables, and builds charts and pivot tables.
+
+## In Excel and Google Sheets
+
+To use Autosheet from inside Excel or Google Sheets, install the [Excel add-in](https://autosheet.com/gpt-for-excel) or the [Google Sheets add-on](https://autosheet.com/gpt-for-sheets). The Google Sheets add-on runs the same agent as Autosheet MCP and the API, which work with Google Sheets only.
+
+Autosheet, formerly GPT for Work, is built by [Talarian](https://talarian.io).
 
 ## Links
 
-- [Autosheet](https://autosheet.com/)
-
-- [GPT for Work dashboard](https://dashboard.gptforwork.com/)
-
-- [Support](https://support.gptforwork.com/hc/en-us/requests/new)
-
-- [YouTube](https://www.youtube.com/@gptforwork)
+[Website](https://autosheet.com/) · [MCP setup](https://autosheet.com/mcp) · [API reference](https://autosheet.com/docs/api) · [Dashboard](https://dashboard.autosheet.com/login) · [Support](https://support.autosheet.com/hc/en-us/requests/new) · [YouTube](https://www.youtube.com/channel/UCa5AHL5_ugfRdFuK3I3stDw)
